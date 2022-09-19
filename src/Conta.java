@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 public class Conta {
     private double saldo;
     private int agencia;
@@ -32,13 +33,22 @@ public class Conta {
         return this.numero;
     }
     public void setNumero(int novoNumero){
-        this.numero = novoNumero;
+        if(novoNumero > 0) {
+            this.numero = novoNumero;
+        }else {
+           throw new NumeroInvalidoException("Número inválido");
+        }
     }
     public int getAgencia(){
         return this.agencia;
     }
     public void setAgencia(int novaAgencia){
-        this.agencia = novaAgencia;
+        if(novaAgencia > 0){
+            this.agencia = novaAgencia;
+        }else {
+            throw new NumeroInvalidoException("Número inválido");
+        }
+
     }
 
     public void setTitular(Cliente titular) {
