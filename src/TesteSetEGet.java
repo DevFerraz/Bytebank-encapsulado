@@ -10,6 +10,6 @@ public class TesteSetEGet {
         Marcela.setProfissao("Professora");
         Marcela.setNascimento("31/9/1994");
         conta.setTitular(Marcela);
-        System.out.println(conta.getSaldo());
+        System.out.println(conta.getTitular().getNome());
     }
 }
