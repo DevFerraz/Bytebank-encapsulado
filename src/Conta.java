@@ -64,6 +64,7 @@ public class Conta {
     }
     public static int getTotal(){
         return Conta.total;
+
     }
 }
 
